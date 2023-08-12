@@ -1,0 +1,131 @@
+/* Global Reset */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #111;
+}
+
+/* Header */
+header {
+    background-color: #232f3e;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+nav li {
+    margin: 0 1rem;
+}
+
+.category {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.category:hover {
+    color: #f39c12;
+}
+
+/* Products */
+#products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.product-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+/* Cart */
+#cart {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    background-color: white;
+    color: #111;
+    height: 100%;
+    padding: 2rem;
+    transition: 0.3s;
+    overflow-y: auto;
+    box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cart.visible {
+    right: 0;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+#total {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+/* Billing Form */
+#billing-form {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#billing-form label {
+    margin-bottom: 0.5rem;
+}
+
+#billing-form input,
+#billing-form textarea {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+#billing-form button {
+    background-color: #f0c14b;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#billing-form button:hover {
+    background-color: #e68a00;
+}

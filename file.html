@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>SUPERMART</title>
+</head>
+<body>
+    <header>
+        <h1>SUPERMART</h1>
+        <div id="cart-icon">Cart</div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><button onclick="clearFilter()">All Products</button></li>
+            <li><button onclick="filterProducts('Electronics')">Electronics</button></li>
+            <li><button onclick="filterProducts('Clothing')">Clothing</button></li>
+            <li><button onclick="filterProducts('Groceries')">Groceries</button></li>
+        </ul>
+    </nav>
+
+    <div id="products">
+    </div>
+
+    <div id="cart" class="cart">
+        <h2>Your Cart</h2>
+        <ul id="cart-items">
+        </ul>
+        <p id="total">Total: $0.00</p>
+        <form id="billing-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            
+            <label for="address">Address:</label>
+            <textarea id="address" required></textarea>
+            
+            <button type="submit">Place Order</button>
+        </form>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
